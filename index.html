@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style/index_style.css" media="screen" />
+    <script src="https://kit.fontawesome.com/d4d91c9b8f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <title>Proyecto gifOS</title>
+</head>
+<body>
+    <header>
+        <div class="title" id="title"><p>!Bienvenidos/as a Guifos.com!------Donde los gifs están.////// Número de visitas:</p></div>
+    </header>
+    <main>
+        <section id="menu">
+            <img  class="logo" src="./images/gifOF_logo.png" alt="Logo">
+            <div id="dropdown_menu" class="dropdown_menu">
+                <input type="button" class="create_guifos" id="create_Gifos" value="Crear Gifos">
+                <div class="shoose_theme_option">
+                    <button class="create_guifos" id="background_gifos" onclick="sailors_guifos()">Elegir tema</button>
+                    <button class="guifos_options" id="gifos_options" onclick="sailors_guifos()"><i class="fas fa-caret-down"></i></button>
+                    <ul id="menu_button">
+                        <li id="item"><a href="#" onclick="Sailor_day()">Sailor Day</a></li>
+                        <li id="item"><a href="#" onclick="Sailor_night()">Sailor Night</a></li>
+                    </ul>
+                </div>
+                <input type="button" class="my_gifos" id="my_Gifos" value="Mis Gifos">
+            </div>
+        </section>
+        <section class="search">
+            <div class="search_title" id="search_title"><p>Buscar</p></div>
+            <div>
+                <input type="text" name="textbox_search" id="textbox_search" class="textbox_search" onclick="search_recommendations()" placeholder="   Busca gifs, hashtags, temas, busca lo que quieras...">&nbsp;&nbsp;
+                <button class="search_button" id="search_button" onclick="getSearchResultsClick()"><i class="fas fa-search"></i>&nbsp;&nbsp;Buscar</button>
+            </div>
+            <div class="recommendation_search" id="recommendation_search">
+                <br>
+                <label>Busquedas populares</label>
+                <ul class="recommendation_search_menu">
+                    <li ><a href="#" >Opcion 1 <i class="fas fa-arrow-right"></i></a></li>
+                    <li ><a href="#" >Opcion 2 <i class="fas fa-arrow-right"></i></a></li>
+                    <li ><a href="#" >Opcion 3 <i class="fas fa-arrow-right"></i></a></li>
+                </ul>
+            </div>
+        </section>
+        <br><br><br>
+        <section>
+            <input type="text" name="today_we_suggest_you" id="today_we_suggest_you" class="today_we_suggest_you" value="   Hoy te sugerimos:" readonly>
+            <br>
+        </section>
+        <br><br><br>
+        <section id="tendency">
+            <input type="text" name="tendency" id="tendency" class="today_we_suggest_you" value="   Tendencias:" readonly>
+            <br>
+            <div id="#gifos_tendency"></div>
+        </section>
+    </main>
+    <script src="./script/index_js.js" language="javascript" type="text/javascript"></script>
+</body>
+</html>
