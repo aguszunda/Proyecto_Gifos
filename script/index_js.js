@@ -30,35 +30,23 @@ async function getCategoriesFromChuckNorris() {
 function Sailor_night() {
 
     document.body.style.backgroundColor = '#0B173B';
-    //theme.href = './style/index_style_white.css';
-    
-    document.getElementById("title").style.backgroundImage = 'linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%)';
-    document.getElementById("search_title").style.backgroundImage = 'linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%)';
-    
-    document.getElementById("create_Gifos").style.background = '#EE3EFE';
-    document.getElementById("create_Gifos").style.color = '#FFFFFF';
-    document.getElementById("background_gifos").style.background = '#EE3EFE';
-    document.getElementById("background_gifos").style.color = '#FFFFFF';
-    document.getElementById("gifos_options").style.background = '#EE3EFE';
-    document.getElementById("gifos_options").style.color = '#FFFFFF';
-    document.getElementById("my_Gifos").style.background = '#0B173B';
-    document.getElementById("my_Gifos").style.color = '#FFFFFF';
+    document.getElementById("logo").src = "./images/gifOF_logo_dark.png";
+    document.getElementById("title").className = "title_black";
+    document.getElementById("search_title").className = "search_title_black";
+    document.getElementById("create_Gifos").className = "create_guifos_dark";
+    document.getElementById("background_gifos").className = "create_guifos_dark";
+    document.getElementById("gifos_options").className = "guifos_options_dark";
+    document.getElementById("my_Gifos").className = "my_gifos_dark";
 }
 function Sailor_day() {
     document.body.style.backgroundColor = 'white';
-    //theme.href = './style/index_style_white.css';
-    document.getElementById("title").style.backgroundImage = ' linear-gradient(to right, #4180F6 0%, #F7C9F3 100%)';
-    document.getElementById("search_title").style.backgroundImage = 'linear-gradient(to right, #4180F6 0%, #F7C9F3 100%)';
-    
-    
-    document.getElementById("create_Gifos").style.background = '#F7C9F3';
-    document.getElementById("create_Gifos").style.color = '#110038';
-    document.getElementById("background_gifos").style.background = '#F7C9F3';
-    document.getElementById("background_gifos").style.color = '#110038';
-    document.getElementById("gifos_options").style.background = '#F7C9F3';
-    document.getElementById("gifos_options").style.color = '#110038';
-    document.getElementById("my_Gifos").style.background = '#FFFFFF';
-    document.getElementById("my_Gifos").style.color = '#110038';
+    document.getElementById("logo").src = "./images/gifOF_logo.png";
+    document.getElementById("title").className = "title";
+    document.getElementById("search_title").className = "search_title";
+    document.getElementById("create_Gifos").className = "create_guifos";
+    document.getElementById("background_gifos").className = "create_guifos";
+    document.getElementById("gifos_options").className = "guifos_options";
+    document.getElementById("my_Gifos").className = "my_gifos";
 }
 function sailors_guifos() {
     let backgound = document.getElementById("menu_button").style.display;
