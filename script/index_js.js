@@ -1,58 +1,9 @@
-/*class Giphy {
-    constructor(keyword){
-        this.keyword = keyword;
-        this.endpoint = 'http://api.giphy.com/v1/gifs';
-        this.api_key = 'FBISKgk3iiH04HMYUOCMJ6rqPgLwVZbp';
-    }
 
-    getGifUrl(callback){
-        var xhr = new XMLHttpRequest();
-
-        xhr.open("GET", this.endpoint + "/translate?api_key="+this.api_key+"&s="+this.keyword);
-
-        xhr.responseType = "json";
-
-        xhr.onload = function() {
-            callback(this.response.data.images.original.mp4);
-        }
-
-        xhr.send();
-    }
-
-    static getUrlAsync(keyword, callback){
-        return new Giphy(keyword).getGifUrl(callback);
-    }
-}*/
 
 window.onload = () => {
-    let search = 'goku';
-  //  getSearchResults(search);
-   // getCategoriesFromChuckNorris();
+    
 }
-function getSearchResults(search) {
-    debugger;
-    let apiKey = 'FBISKgk3iiH04HMYUOCMJ6rqPgLwVZbp';
-    let url = 'http://api.giphy.com/v1/gifs/search?q=' + search + '&api_key=' + apiKey;
-
-    const found = await fetch(url).then(response => {
-            let dato = response.json();
-            console.log(dato.json.data);
-            return response.json();
-        }).then(data => {
-            console.log(data);
-            return data;
-        }).catch(error => {
-            console.log("Error: " + error);
-            return error;
-        });
-    return found;
-}
-
-function getSearchResultsClick (){
-    let = busqueda = document.getElementById('textbox_search').value;
-    getSearchResults(busqueda);
-}
-
+/*
 async function getCategoriesFromChuckNorris() {
     try{
       
@@ -64,17 +15,17 @@ async function getCategoriesFromChuckNorris() {
       const datos = await resp.json();//Traigo los objetos de tipo json en resultado
       console.log(datos);
       //armando el html de categorias
-     /* let lista = "";
+      let lista = "";
       datos.forEach(dato => {
         lista += " <a href='#'><h2>"+ dato +"</h2></a>" 
-      });*/
+      });
 
       //return gifos_tendency.innerHTML = lista; // Pega listado en "#cuck_list"
     }catch(err){
       alert("Falló el api al traer el listado.\n", err);
     }
 
-  }
+  }*/
 
 function Sailor_night() {
 
