@@ -37,6 +37,8 @@ function Sailor_night() {
     document.getElementById("background_gifos").className = "create_guifos_dark";
     document.getElementById("gifos_options").className = "guifos_options_dark";
     document.getElementById("my_Gifos").className = "my_gifos_dark";
+    document.getElementById("menu_button").className = "menu_button_dark";
+    document.getElementById("search").className = "search_dark";
 }
 function Sailor_day() {
     document.body.style.backgroundColor = 'white';
@@ -47,6 +49,8 @@ function Sailor_day() {
     document.getElementById("background_gifos").className = "create_guifos";
     document.getElementById("gifos_options").className = "guifos_options";
     document.getElementById("my_Gifos").className = "my_gifos";
+    document.getElementById("menu_button").className = "menu_button";
+    document.getElementById("search").className = "search";
 }
 function sailors_guifos() {
     let backgound = document.getElementById("menu_button").style.display;

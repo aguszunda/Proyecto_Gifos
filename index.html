@@ -20,15 +20,15 @@
                 <div class="shoose_theme_option">
                     <button class="create_guifos" id="background_gifos" onclick="sailors_guifos()">Elegir tema</button>
                     <button class="guifos_options" id="gifos_options" onclick="sailors_guifos()"><i class="fas fa-caret-down"></i></button>
-                    <ul id="menu_button">
-                        <li id="item"><a href="#" onclick="Sailor_day()">Sailor Day</a></li>
-                        <li id="item"><a href="#" onclick="Sailor_night()">Sailor Night</a></li>
+                    <ul id="menu_button" class="menu_button">
+                        <li id="item" class="item"><a href="#" onclick="Sailor_day()">Sailor Day</a></li>
+                        <li id="item" class="item"><a href="#" onclick="Sailor_night()">Sailor Night</a></li>
                     </ul>
                 </div>
                 <input type="button" class="my_gifos" id="my_Gifos" value="Mis Gifos">
             </div>
         </section>
-        <section class="search">
+        <section id="search" class="search">
             <div class="search_title" id="search_title"><p>Buscar</p></div>
             <div>
                 <input type="text" name="textbox_search" id="textbox_search" class="textbox_search" onclick="search_recommendations()" placeholder="   Busca gifs, hashtags, temas, busca lo que quieras...">&nbsp;&nbsp;
