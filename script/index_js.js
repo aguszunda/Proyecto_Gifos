@@ -1,31 +1,28 @@
-
-
-window.onload = () => {
-    
-}
-/*
-async function getCategoriesFromChuckNorris() {
-    try{
-      
-      let tendency = 'autos';
-      let apiKey = 'FBISKgk3iiH04HMYUOCMJ6rqPgLwVZbp';
-      let url = 'http://api.giphy.com/v1/gifs/search?q=' + tendency + '&api_key=' + apiKey;
-
-      const resp = await fetch(url);//consulto a la Api
-      const datos = await resp.json();//Traigo los objetos de tipo json en resultado
-      console.log(datos);
-      //armando el html de categorias
-      let lista = "";
-      datos.forEach(dato => {
-        lista += " <a href='#'><h2>"+ dato +"</h2></a>" 
-      });
-
-      //return gifos_tendency.innerHTML = lista; // Pega listado en "#cuck_list"
-    }catch(err){
-      alert("Falló el api al traer el listado.\n", err);
+/*class Giphy {
+    constructor(keyword) {
+        this.keyword = keyword;
+        this.endpoint = 'http://api.giphy.com/v1/gifs';
+        this.apiKey = 'FBISKgk3iiH04HMYUOCMJ6rqPgLwVZbp'; 
     }
 
-  }*/
+    getGifUrl(callback){
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", this.endpoint + "/search?api_key=" + this.apiKey + "&s=" + this.keyword);
+        xhr.responseType = "Json";
+        xhr.onload = function() {
+            callback(this.response.data.images.original.mp4);
+        }
+        xhr.send();
+    }
+
+    static getUrlAsync(keyword,callback) {
+        return new Giphy(keyword).getGifUrl(callback);
+    }
+}*/
+
+window.onload = () => {
+    getSearchTendencies('goku');
+}
 
 function Sailor_night() {
 
@@ -87,11 +84,13 @@ function search_recommendations(){
         if(backgound == 'none' || backgound == ""){
             document.getElementById("recommendation_search").style.display = 'block';
             document.getElementById("search_button").style.background = '#F7C9F3';
-            document.getElementById("search_button").style.color = '#110038';
+            document.getElementById("search_button").style.color = '#110038';textbox_search
+            document.getElementById("textbox_search").style.color = '#000000';
         } else {
             document.getElementById("recommendation_search").style.display = 'none';
             document.getElementById("search_button").style.background = '#E6E6E6';
             document.getElementById("search_button").style.color = '#B4B4B4';
+            document.getElementById("textbox_search").style.color = '#B4B4B4';
         }
 
     } else if(aux === "search_dark") {
@@ -99,15 +98,31 @@ function search_recommendations(){
             document.getElementById("recommendation_search").style.display = 'block';
             document.getElementById("search_button").style.background = '#EE3EFE';
             document.getElementById("search_button").style.color = '#FFFFFF';
+            document.getElementById("textbox_search").style.color = '#000000';
         } else {
             document.getElementById("recommendation_search").style.display = 'none';
             document.getElementById("search_button").style.background = '#B4B4B4';
             document.getElementById("search_button").style.color = '#8F8F8F';
+            document.getElementById("textbox_search").style.color = '#B4B4B4';
         }
     }
 }
+
+
+async function getSearchTendencies(suggest) {
+    const mykey = 'lDyVjahIgvrbdCs1DLGN9CV0pCweWgQV';
+    let url =  'http://api.giphy.com/v1/gifs/search?q=' + suggest + '&api_key=' + mykey;
+    let resp = await fetch(url);
+    let respuestaJson = await resp.json();
+    let data = respuestaJson.data;
+
+    let gifLink = data[0].images.downsized_medium.url;
+    document.getElementById("suggest1").src = gifLink;
+}
+
+
 /*https://www.dropbox.com/s/ihc86nsh7l5fsuu/gifOS.mp4?dl=0
 
-gifos: FBISKgk3iiH04HMYUOCMJ6rqPgLwVZbp
+gifos: lDyVjahIgvrbdCs1DLGN9CV0pCweWgQV
 
 */
