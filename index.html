@@ -32,7 +32,7 @@
             <div class="search_title" id="search_title"><p>Buscar</p></div>
             <div>
                 <input type="text" name="textbox_search" id="textbox_search" class="textbox_search" onclick="search_recommendations()" placeholder="   Busca gifs, hashtags, temas, busca lo que quieras...">&nbsp;&nbsp;
-                <button class="search_button" id="search_button" onclick="getSearchResultsClick()"><i class="fas fa-search"></i>&nbsp;&nbsp;Buscar</button>
+                <button class="search_button" id="search_button" onclick="getSearchGift()"><i class="fas fa-search"></i>&nbsp;&nbsp;Buscar</button>
             </div>
             <div class="recommendation_search" id="recommendation_search">
                 <br>
@@ -48,21 +48,40 @@
         <section>
             <input type="text" name="today_we_suggest_you" id="today_we_suggest_you" class="today_we_suggest_you" value="   Hoy te sugerimos:" readonly>
             <br>
-            <div>
+            <div id="block1" class="block1">
                 <div class="frame">
-                    <input type="text" name="title_suggest1" id="title_suggest1"  value="#Goku" class="title_gift" readonly><i class="fad fa-times-square"></i>
+                    <input type="text" name="title_suggest1" id="title_suggest1"  value="#" class="title_gift" readonly>
+                    <i class="fad fa-times-square"></i>
                     <img src="" id="suggest1" class="gift" alt="goku">
+                    <button class="more_suggest" id="more_suggest1" >Ver más...</button>
+                </div>
+                <div class="frame">
+                    <input type="text" name="title_suggest2" id="title_suggest2"  value="#" class="title_gift" readonly>
+                    <i class="fad fa-times-square"></i>
+                    <img src="" id="suggest2" class="gift" alt="goku">
+                    <button class="more_suggest" id="more_suggest2" >Ver más...</button>
+                </div>
+                <div class="frame">
+                    <input type="text" name="title_suggest3" id="title_suggest3"  value="#" class="title_gift" readonly>
+                    <i class="fad fa-times-square"></i>
+                    <img src="" id="suggest3" class="gift" alt="#Gohan">
+                    <button class="more_suggest" id="more_suggest3" >Ver más...</button>
+                </div>
+                <div class="frame">
+                    <input type="text" name="title_suggest4" id="title_suggest4"  value="#" class="title_gift" readonly>
+                    <i class="fad fa-times-square"></i>
+                    <img src="" id="suggest4" class="gift" alt="goku">
+                    <button class="more_suggest" id="more_suggest1" >Ver más...</button>
                 </div>
             </div>
-            
         </section>
         <br><br><br>
         <section>
             <input type="text" name="tendency" id="tendency" class="today_we_suggest_you" value="   Tendencias:" readonly>
             <br>
-            <div>
-             
+            <div id="tendency">
             </div>
+            <div id="prueba"></div>
         </section>
     </main>
     <script src="./script/index_js.js" language="javascript" type="text/javascript"></script>

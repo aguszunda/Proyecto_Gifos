@@ -21,7 +21,10 @@
 }*/
 
 window.onload = () => {
-    getSearchTendencies('goku');
+    getSearchTendencies('Goku', 'suggest1');
+    getSearchTendencies('Vegueta', 'suggest2');
+    getSearchTendencies('Naruto', 'suggest3');
+    getSearchTendencies('Sakuragi', 'suggest4');
 }
 
 function Sailor_night() {
@@ -108,8 +111,7 @@ function search_recommendations(){
     }
 }
 
-
-async function getSearchTendencies(suggest) {
+async function getSearchTendencies(suggest, img_id) {
     const mykey = 'lDyVjahIgvrbdCs1DLGN9CV0pCweWgQV';
     let url =  'http://api.giphy.com/v1/gifs/search?q=' + suggest + '&api_key=' + mykey;
     let resp = await fetch(url);
@@ -117,8 +119,67 @@ async function getSearchTendencies(suggest) {
     let data = respuestaJson.data;
 
     let gifLink = data[0].images.downsized_medium.url;
-    document.getElementById("suggest1").src = gifLink;
+    document.getElementById(img_id).src = gifLink;
+    document.getElementById('title_'+img_id).value = '#' + suggest;
 }
+
+async function getSearchGift() {
+    try{
+        debugger;
+        let suggest = document.getElementById("textbox_search").value
+        const mykey = 'lDyVjahIgvrbdCs1DLGN9CV0pCweWgQV';
+        let url =  'http://api.giphy.com/v1/gifs/search?q=' + suggest + '&api_key=' + mykey;
+        let resp = await fetch(url);
+        let list = await resp.json();
+        let thumb = "";
+        list.data.forEach(element => {
+            thumb += `<div>
+            <img src='${element.images.fixed_height.url}'>
+            </div>
+             `;
+        });
+        document.getElementById("tendency").value = suggest.toUpperCase();
+        const giphyListDiv = document.getElementById("prueba");
+        giphyListDiv.innerHTML = thumb;
+    }catch(err){
+        alert("Error: " + err);
+    }
+}
+
+
+
+/*async function getTendencies(endPoint, title){
+    try{
+        debugger;
+        const res = await fetch(endPoint);
+        const list = await res.json();
+        let thumb = "";
+        list.data.array.forEach(element => {
+            thumb += `<a> 
+            <img src='${element.images.fixed_height.url}'>
+            <span>
+                <h2>#'${element.title.substring(0,30)}'...</h2>
+            </span>
+            </a>
+            <div></div>
+            `;
+        });
+        const giphyTitleDiv = document.getElementById("giphy_id");
+        giphyTitleDiv.innerHTML = (title) + ":";
+        const giphyListDiv = document.getElementById("giphy_list");
+        giphyListDiv.innerHTML = thumb;
+
+    }catch (err){
+        console.log("Error: " + err);
+    }
+}
+
+function suggestSearch(suggest){
+    const mykey = 'lDyVjahIgvrbdCs1DLGN9CV0pCweWgQV';
+    let url =  'http://api.giphy.com/v1/gifs/trending'+'g&api_key=' + mykey;
+    //let url =  'http://api.giphy.com/v1/gifs/search?q=' + suggest + '&api_key=' + mykey;
+    getTendencies(url, title)
+}*/
 
 
 /*https://www.dropbox.com/s/ihc86nsh7l5fsuu/gifOS.mp4?dl=0
