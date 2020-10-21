@@ -195,10 +195,10 @@
 
 .block1 {
     display: grid;
-    grid-template-columns: 340px 340px 340px 340px;
+    grid-template-columns: 300px 300px 300px 300px;
     grid-template-rows: 315px;
     margin-top: 2%;
-    margin-left: 135px;
+    margin-left: 7%;
 }
 
 .frame {
@@ -274,6 +274,45 @@
     color: #110038;
 }
 
+.tendencies_gifos {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: 335px;
+    margin-top: 2%;
+    margin-left: 7%;
+}
+
+.tendencies_gifos div {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 315px;
+    margin-right: 9px;
+    margin-bottom: 25px;
+}
+
+.tendencies_gifos div img {
+    margin-top: 6px;
+    margin-left: 6px;
+    height: 298px;
+    width: 280px;
+}
+
+.tendencies_gifos div h2{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    margin-top: 279px;
+    margin-left: 7px;
+    width: 278px;
+    text-align: center;
+    height: 24px;
+    background-image: linear-gradient(270deg, #F7C9F3 0%, #4180F6 100%);
+    color: white;
+    border: 0;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+}
+
 /*FUNCIONES*/
 
 /*HOVERS*/
@@ -303,6 +342,19 @@
 
 .my_gifos:hover {
     border: 1px solid #110038;
+}
+
+.tendencies_gifos div:hover {
+     background: #E6E6E6; 
+     box-shadow: inset -2px -2px 0 0 #B4B4B4, inset 2px 2px 0 0 #FFFFFF; 
+}
+
+.tendencies_gifos div img:hover {
+    border: 1px solid #110038;
+}
+
+.tendencies_gifos div img:hover ~ h2 {
+    display: block;
 }
 
 /*ACTIVES*/
@@ -511,6 +563,74 @@
     box-shadow: inset -2px -2px 0 0 #E6DCE4, inset 2px 2px 0 0 #110038;
 }
 
+.frame_dark {
+    background: #B4B4B4;
+    box-shadow: inset -2px -2px 0 0 #5C5C5C, inset 2px 2px 0 0 #FFFFFF;
+    width: 288px;
+    height: 313px;
+}
+
+.title_gift_dark {
+    text-align: center;
+    margin-top: 4px;
+    margin-left: 4px;
+    height: 24px;
+    width: 280px;
+    color: white;
+    border: 0;
+    background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+}
+
+.more_suggest_dark {
+    position: absolute;
+    margin-top: 230px;
+    margin-left: -270px;
+    padding: 10px;
+    background: #2E32FB;
+    border: 1px solid #4C2F99;
+    box-shadow: inset -2px -2px 0 0 #2124B3, inset 2px 2px 0 0 #FFFFFF;
+}
+
+.tendencies_gifos_dark {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: 335px;
+    margin-top: 2%;
+    margin-left: 7%;
+}
+
+.tendencies_gifos_dark div {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 315px;
+    margin-right: 9px; 
+    margin-bottom: 25px;
+}
+
+.tendencies_gifos_dark div img {
+    margin-top: 6px;
+    margin-left: 6px;
+    height: 298px;
+    width: 280px;
+}
+
+.tendencies_gifos_dark div h2{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    margin-top: 279px;
+    margin-left: 7px;
+    width: 278px;
+    text-align: center;
+    height: 24px;
+    background-image: linear-gradient(270deg, #EE3EFE 0%, #2E32FB 100%);
+    color: white;
+    border: 0;
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 14px;
+}
+
+
 /*EVENTOS DARK*/
 
 /*HOVERS*/
@@ -534,6 +654,19 @@
 
 .my_gifos:hover {
     border: 1px solid #FFFFFF;
+}
+
+.tendencies_gifos_dark div:hover {
+    background: #B4B4B4; 
+    box-shadow: inset -2px -2px 0 0 #5C5C5C, inset 2px 2px 0 0 #FFFFFF; 
+}
+
+.tendencies_gifos_dark div img:hover {
+    border: 1px solid #110038;
+}
+
+.tendencies_gifos_dark div img:hover ~ h2 {
+    display: block;
 }
 
 /*ACTIVES*/
